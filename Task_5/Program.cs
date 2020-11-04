@@ -35,7 +35,7 @@ namespace Task_5
 
             Fill_array_z(array_x, array_y, ref array_z);
 
-            Console.WriteLine("Масив z :");
+            Console.WriteLine("\nМасив z :");
             Array_print(array_z);
         }
 
