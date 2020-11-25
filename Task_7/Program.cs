@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 namespace Task_7
 {
@@ -7,9 +6,7 @@ namespace Task_7
     {
         static void Main(string[] args)
         {
-            Console.OutputEncoding = Encoding.Unicode;
-            Console.InputEncoding = Encoding.Unicode;
-
+            Console.WriteLine("Hello World!");
         }
     }
 }
