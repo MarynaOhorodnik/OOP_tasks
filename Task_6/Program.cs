@@ -12,23 +12,26 @@ namespace Task_6
 
             int m;
             int n;
-            m = GetData_keyb("значення m кількість стрічок масиву");
-            n = GetData_keyb("значення n кількість стрічок масиву");
+            m = MyProgram.GetData_keyb("значення m кількість стрічок масиву");
+            n = MyProgram.GetData_keyb("значення n кількість стовпців масиву");
 
             int[,] mas = new int[m, n];
 
-            Arr_rand(ref mas);
-            Arr_print(mas);
+            MyProgram.Arr_rand(ref mas);
+            MyProgram.Arr_print(mas);
 
             int key;
-            key = GetData_keyb("значення ключа для пошуку", "numb");
+            key = MyProgram.GetData_keyb("значення ключа для пошуку", "numb");
 
-            Arr_find(mas, key);
+            MyProgram.Arr_find(mas, key);
 
-            Arr_func(mas);
+            MyProgram.Arr_func(mas);
             
         }
+    }
 
+    class MyProgram
+    {
         public static int GetData_keyb(string s, string mode = "arr")
         {
             int x = 0;
@@ -64,7 +67,7 @@ namespace Task_6
             {
                 for (int j = 0; j < n; j++)
                 {
-                    arr[i,j] = rnd.Next(1, 41);
+                    arr[i, j] = rnd.Next(1, 41);
                 }
             }
         }
@@ -77,11 +80,11 @@ namespace Task_6
             {
                 for (int j = 0; j < n; j++)
                 {
-                    Console.WriteLine($"arr[{i},{j}] = {arr[i, j]}");
+                    Console.Write($"{arr[i, j]} \t");
                 }
 
                 Console.WriteLine();
-                
+
             }
         }
 
@@ -101,6 +104,7 @@ namespace Task_6
                     }
                 }
             }
+
             if (flag)
             {
                 Console.WriteLine($"У масиві немає елемента {key}");
@@ -125,16 +129,16 @@ namespace Task_6
                         max = arr[i, j];
                     }
 
-                    if (arr[i,j] < min)
+                    if (arr[i, j] < min)
                     {
                         min = arr[i, j];
                     }
                 }
 
-                Console.WriteLine($"{i+1}. min({min}) + max({max}) = {min + max}");
+                Console.WriteLine($"{i + 1}. min({min}) + max({max}) = {min + max}");
 
             }
         }
-
     }
+
 }
